@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>QuotingDojo</title>
+	<style type="text/css">
+		.quote{
+			margin: 10px;
+			border-bottom: 1px solid black;
+		}
+	</style>
+</head>
+<body>
+<h1>Here are the awesome quotes!</h1>
+<div>
+	<% for(var i in users){ %>
+		<div class="quote">
+			<p>"<%= users[i].quote %>"</p>
+			<p>-<%= users[i].name %> at <%= users[i].createdAt %></p>
+		</div>
+	<% } %>
+</div>
+<button><a href="/">Go Back</a></button>
+</body>
+</html>
